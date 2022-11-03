@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .social-icon {
+    @apply transition-transform duration-200 hover:scale-125;
+  }
+}
