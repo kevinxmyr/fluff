@@ -14,7 +14,8 @@ module.exports = {
         rufina: "Rufina"
       },
       backgroundImage: {
-        'its-menu': "url(/src/assets/its-menu-5.jpeg)"
+        'its-menu': "url(/src/assets/its-menu-5.jpeg)",
+        'heroImg': "url(/src/assets/hero2.jpg)"
       },
       backgroundColor: {
         'navbar': '#181E21'

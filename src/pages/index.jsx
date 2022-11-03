@@ -10,7 +10,6 @@ export const Index = () => {
     <>
       <Hero />
       <Hero2 />
-      {/* MENU HERE */}
       <Wecare />
       <Recipes />
       <Gallery />

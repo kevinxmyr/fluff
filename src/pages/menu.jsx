@@ -44,8 +44,8 @@ export const Menu = () => {
       <div className="
         uppercase font-bold bg-its-menu h-[28rem] bg-center px-40 flex 
         text-4xl items-center
-      "> 
-        It's menu
+      text-black"> 
+        Menu:
       </div>
       <Box title="Snacks">
         {snacksMap}
