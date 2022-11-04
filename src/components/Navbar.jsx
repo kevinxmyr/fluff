@@ -15,9 +15,8 @@ export default function Navbar() {
         }
         .link > a::before {
           content: '';
-          height: 1px;
+          height: 2px;
           background-color: white;
-          width: 0%;
           position: absolute;
           top: 90%;
         }

@@ -3,9 +3,9 @@ module.exports = {
   content: ["./src/**/*.jsx"],
   theme: {
     screens: {
-      'iPhone': '375px',
+      'iPhone': '414px',
       'iPad': '768px',
-      'laptop': '1200px'
+      'lt': '1200px'
     },
     extend: {
       fontFamily: {
@@ -24,7 +24,7 @@ module.exports = {
         'index-margin': '0 8.5rem'
       },
       colors: {
-        beige: '#DAD8D3'
+        beige: '#EEE9E2'
       }
     }
   },

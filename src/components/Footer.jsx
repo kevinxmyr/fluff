@@ -7,25 +7,25 @@ export default function Footer() {
     <div
       className='
       bg-beige
-      // text-black 
+      text-black 
       font-rufina 
-      p-[2rem_8.5rem]
+      max-w-[100%]
+      p-[3rem_3rem]
       flex
-      iPad:flex-col 
+      flex-col
+      iPad:pl-[20%]
+      lt:flex-row
+      lt:p-[4rem_4rem]
       '>
-
       {/*---------------------- LEFT DIV -------------------*/}
         <div className='
-          h-[63vh]
-          w-[100%]
-          flex
-          flex-col
-          justify-center
-          iPad:justify-start
-          iPad:h-[auto]
-          iPad:mb-[4.5rem]
+          mb-[2rem]
+          max-w-[23rem]
+          lt:mr-[5%]
           '>
-            <div className="">
+
+            {/* FLUFF KOPPI LOGO */}
+            <div className="mb-[2rem]">
               <h1 className="
                 text-[1.3rem]
                 font-bold
@@ -33,40 +33,45 @@ export default function Footer() {
               ">FLUFF KOPPI.</h1>
             </div>
 
-            <div className="mb-[2rem] mt-[1.5rem] w-[60%] ">
+            {/* ADDRESS */}
+            <div className="mb-[2rem]">
               <p>
                 Purok 6 Brgy San Miguel Mabitac, Laguna, Mabitac, Philippines, 4020
               </p>
             </div>
 
-            <div className="mt-[1.5rem]">
+            {/* SCHEDULE */}
+            <div className="mb-[2rem]">
               <p>MONDAY - FRIDAY <br/> 6:00 AM TO 9:00 PM</p>
             </div>
 
-            <div className="mt-[1.5rem]">
+            {/* SCHEDULE */}
+            <div className="">
               <p>SATURDAY - SUNDAY <br/> 10:00 AM TO 8:00 PM</p>
             </div>
 
         </div>
 
       {/* RIGHT DIV */}
-      <div className="bg-slate- flex flex-col
-      iPad:w-[25rem]">
+      <div className="flex flex-col max-w-[22rem]
+      lt:pt-[3.5rem] 
+      ">
 
-          <div className="mt-[9rem] w-[25rem]
-            iPad:mt-0">
+          {/* OFFICE */}
+          <div className="mb-[2rem]">
             <p>
               Office: Purok 6 Brgy San Miguel Mabitac, Laguna, Mabitac, Philippines,
               4020
             </p>
           </div>
 
-          <div className="mt-[3rem]">
+          {/* CONTACT */}
+          <div className="mb-[2rem]">
             <p>Contact : 4400 - 88 - 823</p>
           </div>
 
-        <div className="bg-slate- flex mt-[8rem]
-        iPad:mt-[3rem]">
+        {/* SOCIAL MEDIA */}
+        <div className="flex ">
           <a href='#'>
             <img className="w-[auto] h-[2rem] mr-[1rem]" src={fb} alt='fb' />
           </a>

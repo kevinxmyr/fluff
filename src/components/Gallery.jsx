@@ -1,4 +1,5 @@
 import React from "react";
+import { BsInstagram } from "react-icons/bs";
 import { Fade } from "react-reveal";
 import pic1 from "../assets/gallery1.jpg";
 import pic2 from "../assets/gallery2.jpg";
@@ -9,47 +10,64 @@ import pic6 from "../assets/gallery6.jpg";
 
 export default function Gallery() {
   return (
-    <div className='bg-beige py-32'>
-      <div className='gap-[1rem] text-black grid grid-cols-3 p-index-margin'>
+    <div className='bg-beige p-[12%] 
+    lt:p-[3.85rem]
+    '>
+
+      <div className='gap-[1rem] text-black grid lt:grid-cols-3 '>
+
         <Fade distance='1.2rem' delay={250}bottom>
-          <div className='bg-slate- '>
-            <img src={pic1} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md" src={pic1} alt='' />
           </div>
+
         </Fade>
         <Fade distance='1.2rem' delay={500} bottom>
-          <div className='bg-slate-'>
-            <img src={pic3} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md"  src={pic3} alt='' />
           </div>
         </Fade>
+
         <Fade distance='1.2rem' delay={750} bottom>
-          <div className='bg-slate-'>
-            <img src={pic4} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md"  src={pic4} alt='' />
           </div>
         </Fade>
+
         <Fade distance='1.2rem' delay={1000} bottom>
-          <div className='bg-slate-'>
-            <img src={pic6} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md"  src={pic6} alt='' />
           </div>
         </Fade>
+
         <Fade distance='1.2rem' delay={1250} bottom>
-          <div className='bg-slate-'>
-            <img src={pic5} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md"  src={pic5} alt='' />
           </div>
         </Fade>
+
         <Fade distance='1.2rem' delay={1500} bottom>
-          <div className='bg-slate-'>
-            <img src={pic2} alt='' />
+          <div className='justify-self-center'>
+            <img className="shadow-md"  src={pic2} alt='' />
           </div>
         </Fade>
+
       </div>
-      <Fade bottom distance='1rem' delay={1750}>
-        <div className='mt-[3rem] '>
-          <div className='grid grid-cols-3 p-index-margin'>
-            <h1 className='font-bold text-black text-lg'>
-              Follow Us on Instagram @fluffkoppicafe
+
+      <Fade bottom distance='1rem' delay={1500}>
+
+        <div className='mt-[3rem] order-first'>
+          <div className='grid lt:grid-cols-3 '>
+            <h1 className='font-bold text-black 
+                lt:text-lg 
+                justify-self-center 
+                text-[1.4rem]
+                lt:justify-self-start'>
+              Follow Us on Instagram <BsInstagram className="inline-block"/> @fluffkoppicafe
             </h1>
           </div>
         </div>
+      
       </Fade>
     </div>
   );

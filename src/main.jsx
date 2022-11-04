@@ -34,7 +34,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
       </Switch>
       <Footer />
-      <Credits />
     </Router>
   </div>
 )

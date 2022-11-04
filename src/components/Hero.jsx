@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 export default function Hero() {
   return (
     <div
-      className='bg-cover pt-[10rem] pl-[3rem] min-h-[90vh] bg-heroImg'>
+      className='bg-cover pt-[10rem] pl-[3rem] min-h-[90vh] bg-heroImg bg-center'>
       <Fade bottom distance='30px'>
         <div className='m-20'>
           <h1 className='text-7xl pb-10 font-bold text-white'>
