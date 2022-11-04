@@ -9,12 +9,14 @@ export default function Recipes() {
       className='
     bg-white
       text-black
-      p-[0_5%]
+      p-[3rem_5%]
       grid
       grid-cols-1
+      justify-center//!!!!!!!!!!!!!!!!!!!!!!!ENDS HERE
 
       iPad:grid-cols-7
-      iPad:
+      iPad:pt-[3rem]
+      iPad:pb-[3rem]
 
       lt:grid-cols-3
       lt:grid-rows-[139px_auto_86px_auto_80px_auto_115px]
@@ -28,6 +30,7 @@ export default function Recipes() {
         {/* FIRST ITEM */}
         <Fade distance='2.5rem' left>
           <div className='bg-slate- col-start-1 row-start-2 w-[20rem] mb-[2rem]
+          justify-center //!!!!!!!!!!!!!!!!!!!!!!!ENDS HERE
           iPad:col-start-3
           lt:col-start-1
           '>
