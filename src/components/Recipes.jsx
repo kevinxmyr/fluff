@@ -12,7 +12,7 @@ export default function Recipes() {
       p-[3rem_5%]
       grid
       grid-cols-1
-      justify-center//!!!!!!!!!!!!!!!!!!!!!!!ENDS HERE
+      justify-center
 
       iPad:grid-cols-7
       iPad:pt-[3rem]
@@ -21,6 +21,8 @@ export default function Recipes() {
       lt:grid-cols-3
       lt:grid-rows-[139px_auto_86px_auto_80px_auto_115px]
       lt:h-[auto]
+      lt:pt-0
+      lt:pb-0
 
 
       '>
@@ -30,7 +32,7 @@ export default function Recipes() {
         {/* FIRST ITEM */}
         <Fade distance='2.5rem' left>
           <div className='bg-slate- col-start-1 row-start-2 w-[20rem] mb-[2rem]
-          justify-center //!!!!!!!!!!!!!!!!!!!!!!!ENDS HERE
+          justify-center 
           iPad:col-start-3
           lt:col-start-1
           '>
@@ -82,6 +84,7 @@ export default function Recipes() {
 
         {/* ITEM 4 PICTURE */}
         <div className='row-start-7 row-end-[8] col-start-1 col-span-3
+        //!---------
         iPad:col-start-3
         lt:col-start-3
         lt:row-start-1

@@ -16,54 +16,56 @@ export default function Gallery() {
 
       <div className='gap-[1rem] text-black grid lt:grid-cols-3 '>
 
-        <Fade distance='1.2rem' delay={250}bottom>
+        <Fade distance='1.2rem' delay={100}bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md" src={pic1} alt='' />
           </div>
 
         </Fade>
-        <Fade distance='1.2rem' delay={500} bottom>
+        <Fade distance='1.2rem' delay={200} bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md"  src={pic3} alt='' />
           </div>
         </Fade>
 
-        <Fade distance='1.2rem' delay={750} bottom>
+        <Fade distance='1.2rem' delay={300} bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md"  src={pic4} alt='' />
           </div>
         </Fade>
 
-        <Fade distance='1.2rem' delay={1000} bottom>
+        <Fade distance='1.2rem' delay={400} bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md"  src={pic6} alt='' />
           </div>
         </Fade>
 
-        <Fade distance='1.2rem' delay={1250} bottom>
+        <Fade distance='1.2rem' delay={500} bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md"  src={pic5} alt='' />
           </div>
         </Fade>
 
-        <Fade distance='1.2rem' delay={1500} bottom>
+        <Fade distance='1.2rem' delay={600} bottom>
           <div className='justify-self-center max-w-[20rem]'>
             <img className="shadow-md"  src={pic2} alt='' />
           </div>
         </Fade>
 
         {/* FOLLOW US TEXT */}
-        <Fade bottom distance='1rem' delay={1500}>
+        <Fade bottom distance='1rem' delay={50}>
         <div className='p-[2rem] order-first lt:order-last '>
           <div className='grid lt:grid-cols-3 '>
             <h1 className='font-bold text-black 
                 justify-self-center
                 text-[1.4rem]
                 leading-8
+                iPad:text-center
+                pl-[2rem]
                 lt:text-lg 
                 lt:justify-self-start
                 '>
-              Follow us on Instagram <BsInstagram className="inline-block"/> @fluffkoppicafe
+              <BsInstagram size={25} className="inline-block"/> Follow us on Instagram <br /> @fluffkoppicafe
             </h1>
           </div>
         </div>

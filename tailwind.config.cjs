@@ -24,7 +24,7 @@ module.exports = {
         'index-margin': '0 8.5rem'
       },
       colors: {
-        beige: '#EEE9E2'
+        beige: '#DAD8D3'
       }
     }
   },
