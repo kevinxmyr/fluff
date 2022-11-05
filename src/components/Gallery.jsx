@@ -58,7 +58,7 @@ export default function Gallery() {
         </Fade>
 
         <Fade distance='1.2rem' delay={600} bottom>
-          <div className='justify-self-center max-w-[25rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md"  src={pic2} alt='' />
           </div>
         </Fade>

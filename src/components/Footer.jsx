@@ -60,7 +60,7 @@ export default function Footer() {
           {/* OFFICE */}
           <div className="mb-[2rem]">
             <p>
-              Office: Purok 6 Brgy San Miguel Mabitac, Laguna, Mabitac, Philippines,
+              <strong> Office: </strong>Purok 6 Brgy San Miguel Mabitac, Laguna, Mabitac, Philippines,
               4020
             </p>
           </div>

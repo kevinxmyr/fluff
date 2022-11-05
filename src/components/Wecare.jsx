@@ -22,13 +22,13 @@ export default function Wecare() {
         lt:flex-row
         lt:justify-center
       '>
-    
+              {/*!---- lt:max-w-[25rem] */}
           <Fade distance='3rem' delay={600} left>
           <div className="
           max-w-[320px] 
           self-center
           lt:justify-items-center
-          lt:max-w-[25rem]
+          //!----
           lt:mr-[10rem] 
           lt:max-w-[1200px]
           ">
