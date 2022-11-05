@@ -10,11 +10,17 @@ import pic6 from "../assets/gallery6.jpg";
 
 export default function Gallery() {
   return (
-    <div className='bg-beige p-[12%] 
+    <div className='bg-beige p-[12%]
+    
     lt:p-[3.85rem]
     '>
 
-      <div className='gap-[1rem] text-black grid lt:grid-cols-3 '>
+      <div className='
+        gap-[1rem] 
+        text-black 
+        grid
+
+        lt:grid-cols-3 '>
 
         <Fade distance='1.2rem' delay={100}bottom>
           <div className='justify-self-center max-w-[20rem]'>
@@ -54,18 +60,18 @@ export default function Gallery() {
 
         {/* FOLLOW US TEXT */}
         <Fade bottom distance='1rem' delay={50}>
-        <div className='p-[2rem] order-first lt:order-last '>
+        <div className='mb-5 order-first lt:order-last '>
           <div className='grid lt:grid-cols-3 '>
             <h1 className='font-bold text-black 
-                justify-self-center
+                
                 text-[1.4rem]
                 leading-8
+                
                 iPad:text-center
-                pl-[2rem]
                 lt:text-lg 
                 lt:justify-self-start
                 '>
-              <BsInstagram size={25} className="inline-block"/> Follow us on Instagram <br /> @fluffkoppicafe
+              <BsInstagram size={25} className="inline-block"/> Follow us on Instagram @fluffkoppicafe
             </h1>
           </div>
         </div>
