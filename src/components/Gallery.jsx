@@ -10,9 +10,12 @@ import pic6 from "../assets/gallery6.jpg";
 
 export default function Gallery() {
   return (
-    <div className='bg-beige p-[12%]
+    <div className='
+    bg-beige
+    p-[12%]
     
-    lt:p-[3.85rem]
+    lt:p-[2.2rem]
+    lt:justify-center
     '>
 
       <div className='
@@ -20,40 +23,42 @@ export default function Gallery() {
         text-black 
         grid
 
-        lt:grid-cols-3 '>
+        lt:grid-cols-3
+        lt:max-w-[1100px]
+        '>
 
         <Fade distance='1.2rem' delay={100}bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md" src={pic1} alt='' />
           </div>
 
         </Fade>
         <Fade distance='1.2rem' delay={200} bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md"  src={pic3} alt='' />
           </div>
         </Fade>
 
         <Fade distance='1.2rem' delay={300} bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md"  src={pic4} alt='' />
           </div>
         </Fade>
 
         <Fade distance='1.2rem' delay={400} bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md"  src={pic6} alt='' />
           </div>
         </Fade>
 
         <Fade distance='1.2rem' delay={500} bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[22rem]'>
             <img className="shadow-md"  src={pic5} alt='' />
           </div>
         </Fade>
 
         <Fade distance='1.2rem' delay={600} bottom>
-          <div className='justify-self-center max-w-[20rem]'>
+          <div className='justify-self-center max-w-[25rem]'>
             <img className="shadow-md"  src={pic2} alt='' />
           </div>
         </Fade>
@@ -66,12 +71,14 @@ export default function Gallery() {
                 
                 text-[1.4rem]
                 leading-8
-                
-                iPad:text-center
+                iPad: text-center
+                lt:text-start
                 lt:text-lg 
                 lt:justify-self-start
+                lt:pl-[1rem]
+                lt:pt-[1rem]
                 '>
-              <BsInstagram size={25} className="inline-block"/> Follow us on Instagram @fluffkoppicafe
+              <BsInstagram size={25} className="inline-block"/> Instagram: @fluffkoppicafe
             </h1>
           </div>
         </div>

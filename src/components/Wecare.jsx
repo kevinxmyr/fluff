@@ -8,7 +8,7 @@ export default function Wecare() {
     bg-beige
     max-w-[auto]
     justify-center
-    flex
+
     ">
 
       <div className='
@@ -18,26 +18,23 @@ export default function Wecare() {
         px-5
         py-[2.7rem]
 
-        iPad:flex
-        iPad:p-[5rem_8.5rem]
-
         lt:flex
         lt:flex-row
-        lt:max-w-[1200px]
+        lt:justify-center
       '>
     
           <Fade distance='3rem' delay={600} left>
-          <div className="max-w-[100%] 
-
-          iPad:basis-[5rem]
-          iPad:self-center
-
+          <div className="
+          max-w-[320px] 
+          self-center
+          lt:justify-items-center
+          lt:max-w-[25rem]
           lt:mr-[10rem] 
           lt:max-w-[1200px]
           ">
             <img className="
-              max-w-[30rem] 
-              h-[auto] 
+              h-[auto]
+              self-center
               shadow-xl"
             src={picture} alt="coffee" />
           </div>
@@ -46,19 +43,19 @@ export default function Wecare() {
           <Fade distance='3rem' delay={500} right>
             <div className=" 
               max-w-xs
-              iPad:w-[25rem]
-              
+              self-center
+              iPad:self-center
               lt:self-center
               ">
               <h1 className="
                 font-bold 
                 mb-8 
                 text-[2rem]
-                iPad:mb-[2rem]">
+                  ">
                   We Care
               </h1>
               
-              <div className="font-rufina">
+              <div className="font-rufina iPad:justify-center">
                 <p className="pb-[2.7rem]">
                   Our philosophy is to be part of the neighborhood and give back to our
                   community.
