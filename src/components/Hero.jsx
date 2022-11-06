@@ -9,13 +9,13 @@ export default function Hero(props) {
     flex
     bg-slate-900
     min-h-[65vh]
-    min-w-[auto]
+    min-w-[100%]
     bg-heroImg 
     bg-center 
     bg-no-repeat
     bg-cover
 
-    iPad: 
+    iPad:text-[1.2rem]
     ">
       
       <style jsx='true'>{`
@@ -57,16 +57,19 @@ export default function Hero(props) {
             font-bold
             text-[3rem]
             pb-5
+            iPad:text-[3.4rem]
+            lt:text-[4rem]
           ">FLUFF KOPPI.</h1>
         </div>
         </Fade>
 
         <Fade bottom distance='18px'>
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-md">
           <Fade bottom distance='20px' delay={350}>
             <p className="
               font-rufina
               pb-[5rem]
+              lt:text-[1.4rem]
             ">{address.address}</p>
           </Fade>
           <Fade bottom distance='16px' delay={750}>
