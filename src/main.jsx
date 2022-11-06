@@ -16,7 +16,7 @@ import './tailwind.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className="font-poppins">
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route exact path="/">
           <Index />

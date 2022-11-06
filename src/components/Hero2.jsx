@@ -4,22 +4,23 @@ import { Fade } from "react-reveal";
 export default function Hero2() {
   return (
     <div className='
-      flex 
       bg-navbar
-      p-[5%]
-      mt-10
+      p-[9%]
+      flex
+      justify-center
       
       iPad:max-w-[auto]
-      lt:h-[70vh] 
-      lt:content-center 
+      lt:h-[70vh]  
       lt:justify-start 
       '>
-      <Fade distance='2rem' bottom delay={300}>
+      <Fade distance='2rem' bottom delay={1250}>
         <div className='
+          bg-red-
+          max-w-[300px]
           text-[1rem]
           lt:mt-[auto] 
           lt:mb-[auto] 
-          lt:ml-[8.5rem]'>
+          '>
           <h1
             className='
              text-[white] 
@@ -28,9 +29,10 @@ export default function Hero2() {
               font-bold 
               text-[1.8rem]
 
-              iPad:leading-[3.5rem]
+              lt:leading-[3.5rem]
               lt:text-[2.6rem] 
               lt:w-[45rem]
+              lt:justify-self-start
               '>
             HOME BAKES MADE WITH LOVE,
              PASSION, 

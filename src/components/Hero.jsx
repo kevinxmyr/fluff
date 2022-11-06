@@ -5,31 +5,46 @@ import {address} from '../data/address'
 
 export default function Hero(props) {
   return (
-    <div className="container 
-    bg-blue-500
-    h-[40vh]">
+    <div className="container
+    flex
+    bg-slate-900
+    min-h-[65vh]
+    min-w-[auto]
+    bg-heroImg 
+    bg-center 
+    bg-no-repeat
+    bg-cover
+
+    iPad: 
+    ">
       
       <style jsx='true'>{`
         .rec{
           position: relative;
         }
-        .rec::before{
+        .rec::after{
           position: absolute;
-          top: 90%;
+          right: 0%;
+          top: 55%;
           content: '';
-          width: 10px;
-          background-color: pink;
+          width: 150px;
+          height: 10px;
+          background-color:#F5F5DC;
+          opacity: .5;
+          z-index:-1;
+          animation: example 1.4s ease 1 alternate;
+        }
+        @keyframes example {
+          0%   {width: 0;}
+          100% {width: 150px}
         }
       `}
       </style>
 
       <div className="wrapper 
-      bg-heroImg 
-      bg-center 
-      bg-no-repeat
-      bg-cover
-      bg-slate-500
-      h-[100%]
+      
+      
+      h-[auto]
       flex
       justify-center
       flex-col
@@ -37,7 +52,7 @@ export default function Hero(props) {
         
         <Fade bottom distance='25px'>
         <div className='flex '>
-          <h1 className="rec
+          <h1 className="rec 
             leading-[3rem]
             font-bold
             text-[3rem]
