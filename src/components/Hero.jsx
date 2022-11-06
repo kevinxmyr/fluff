@@ -8,36 +8,66 @@ export default function Hero(props) {
     <div className="container 
     bg-blue-500
     h-[40vh]">
+      
+      <style jsx='true'>{`
+        .rec{
+          position: relative;
+        }
+        .rec::before{
+          position: absolute;
+          top: 90%;
+          content: '';
+          width: 10px;
+          background-color: pink;
+        }
+      `}
+      </style>
 
-      <div className="wrapper bg-heroImg object-cover
+      <div className="wrapper 
+      bg-heroImg 
+      bg-center 
+      bg-no-repeat
+      bg-cover
       bg-slate-500
       h-[100%]
       flex
       justify-center
-      flex-col">
-
-        <div>
-          <h1 className="
+      flex-col
+      p-[10%]">
+        
+        <Fade bottom distance='25px'>
+        <div className='flex '>
+          <h1 className="rec
             leading-[3rem]
             font-bold
             text-[3rem]
+            pb-5
           ">FLUFF KOPPI.</h1>
         </div>
+        </Fade>
 
-        <div>
-          <p className="font-rufina">{address.address}</p>
-          <div className="socials flex">
+        <Fade bottom distance='18px'>
+        <div className="flex flex-col">
+          <Fade bottom distance='20px' delay={350}>
+            <p className="
+              font-rufina
+              pb-[5rem]
+            ">{address.address}</p>
+          </Fade>
+          <Fade bottom distance='16px' delay={750}>
+            <div className="socials flex">
 
-            <a href="">
-              <FaFacebook size={27} className='social-icon shadow' />
-            </a>
-            <a href="">
-              <FaInstagram size={28} className='social-icon w-7 ml-3' />
-            </a>
+              <a href="https://www.facebook.com/Fluffkoppicafe/" target='_blank'>
+                <FaFacebook size={27} className='social-icon shadow' />
+              </a>
+              <a href="https://www.instagram.com/fluffkoppicafe/?hl=en" target='_blank'>
+                <FaInstagram size={28} className='social-icon w-7 ml-3' />
+              </a>
 
-          </div>
+            </div>
+          </Fade>
         </div>
-
+        </Fade>
 
       </div>
 
