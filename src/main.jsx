@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BookATable } from './components/BookATable'
 import Credits from './components/Credits'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -16,7 +17,7 @@ import './tailwind.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className="font-poppins">
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Index />
@@ -28,12 +29,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Contact />
         </Route>
         <Route path="/book">
+          //!--------
         </Route>
         <Route path="*">
           <Page404 />
         </Route>
       </Switch>
       <Footer />
+      <Credits />
     </Router>
   </div>
 )

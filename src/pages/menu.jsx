@@ -1,5 +1,6 @@
 import { meals } from '@/data/meals'
 import { snacks } from '@/data/snacks'
+import { SlArrowDown } from 'react-icons/sl'
 
 const Box = ({ children, title }) => (
   <div className="bg-white text-black">
@@ -44,8 +45,8 @@ export const Menu = () => {
       <div className="
         uppercase font-bold bg-its-menu h-[28rem] bg-center px-40 flex 
         text-4xl items-center
-      text-black"> 
-        Menu:
+      text-black "> 
+        <SlArrowDown className='animate-bounce'></SlArrowDown>
       </div>
       <Box title="Snacks">
         {snacksMap}
