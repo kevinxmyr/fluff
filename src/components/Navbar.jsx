@@ -2,17 +2,19 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu, GiCoffeeBeans } from 'react-icons/gi'
 
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-	
-  }, [])
   
+  function toggleClose()  {
+    return setOpen(!open);
+  }
+  function toggleCloseInLogo() {
+    return setOpen(false)
+  }
+
   return (
     <div className="bg-navbar
-	 relative
+	  relative
     iPad:sticky
     iPad:flex 
     iPad:justify-between 
@@ -39,49 +41,65 @@ export default function Navbar() {
         }
         
 		  .menu{
-			position: absolute;
-			top: -200%;
+        position: absolute;
+        top: -640%;
 		  }
 		  .menuOpen{
-			position: absolute;
-			top: 1;
-			transition: 1s all ease;
+        position: absolute;
+        top: 1;
+        transition: 1s all ease;
 		  }
+      .menuClose{
+        background-color: red;
+      }
       `}
       </style>
       
-      <div className='flex justify-between p-[5%] animate-pulse'>
+      {/* LOGO AND BURGER MENU */}
+      <div className='flex justify-between p-[5%]'>
         <div className="font-poppins font-bold text-xl uppercase brand
-          self-center
-        ">
+          self-center"
+          onClick={() => toggleCloseInLogo()}>
           <Link to="/">Fluff Koppi.</Link>
         </div>
     
-          <button onClick={() => {
+          <button className='animate-pulse' onClick={() => {
             setOpen(!open)
-          }}><GiHamburgerMenu size={35}/>
+          }}>
+            <GiHamburgerMenu size={35}/>
           </button>
 
       </div>
 		
-		<div className={open ? 'menuOpen' : null}>
-			<div className='menu bg-slate-600 transition-all ease-in min-w-[395px] flex flex-col items-center gap-5'>
-				{/* <h1 className='mt-[1rem]'>item 1</h1>
-				<h1>item 2</h1>
-				<h1 className='mb-[1rem]'>item 3</h1> */}
-				<div className="link">
-            <Link to="/menu">Menu</Link>
-          </div>
+    {/* NAVIGATION MENU ITEMS */}
+      <div className={open ? 'menuOpen' : null}>
+        <div className='menu 
+            bg-red-500
+            z-[10] 
+            min-w-[450px] 
+            flex 
+            flex-col
+            items-center 
+            gap-5
+            p-[1rem]
+          '>
+          {/* <h1 className='mt-[1rem]'>item 1</h1>
+          <h1>item 2</h1>
+          <h1 className='mb-[1rem]'>item 3</h1> */}
+            <div className="link" onClick={() => toggleClose()}>
+              <Link to="/menu">Menu</Link>
+            </div>
 
-          <div className="link">
-            <Link to="/contact">Contact</Link>
-          </div>
+            <div className="link" onClick={() => toggleClose()}>
+              <Link to="/contact">Contact</Link>
+            </div>
 
-          <div className="link">
-            <Link to="/book">Book a table</Link>
-          </div>
-			</div>
-		</div>
+            <div className="link" onClick={() => toggleClose()}>
+              <Link to="/book">Book a table</Link>
+            </div>  
+
+        </div>
+      </div>
 
       {/* <div className="flex gap-7 font-poppins">
 
