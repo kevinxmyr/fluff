@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu, GiCoffeeBeans } from 'react-icons/gi'
+import { Fade } from 'react-reveal'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -42,21 +43,41 @@ export default function Navbar() {
         
 		  .menu{
         position: absolute;
-        top: -640%;
 		  }
 		  .menuOpen{
         position: absolute;
-        top: 1;
-        transition: 1s all ease;
+        animation-name: animateOpen;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
 		  }
       .menuClose{
-        background-color: red;
+        position: absolute;
+        animation-name: animateClose;
+        animation-duration: .250s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes animateOpen{
+        from{
+          top: -640px;
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+      @keyframes animateClose{
+        from{
+          opacity: 1;
+        }
+        to{
+          opacity: 0;
+        }
       }
       `}
       </style>
       
       {/* LOGO AND BURGER MENU */}
-      <div className='flex justify-between p-[5%]'>
+      <div className='flex justify-between p-[5%] z-2'>
         <div className="font-poppins font-bold text-xl uppercase brand
           self-center"
           onClick={() => toggleCloseInLogo()}>
@@ -72,33 +93,33 @@ export default function Navbar() {
       </div>
 		
     {/* NAVIGATION MENU ITEMS */}
-      <div className={open ? 'menuOpen' : null}>
-        <div className='menu 
-            bg-red-500
-            z-[10] 
-            min-w-[450px] 
-            flex 
-            flex-col
-            items-center 
-            gap-5
-            p-[1rem]
-          '>
-          {/* <h1 className='mt-[1rem]'>item 1</h1>
-          <h1>item 2</h1>
-          <h1 className='mb-[1rem]'>item 3</h1> */}
-            <div className="link" onClick={() => toggleClose()}>
-              <Link to="/menu">Menu</Link>
-            </div>
+    <div className={open ? 'menuOpen' : 'menuClose'}>
+          <div className='
+               
+              bg-navbar
+              z-[1] 
+              w-[100vw]
+              flex 
+              flex-col
+              items-center 
+              gap-5
+              p-[1rem]
+            '>
+            {/* <h1 className='mt-[1rem]'>item 1</h1>
+            <h1>item 2</h1>
+            <h1 className='mb-[1rem]'>item 3</h1> */}
+              <div className="link" onClick={() => toggleClose()}>
+                <Link to="/menu">Menu</Link>
+              </div>
 
-            <div className="link" onClick={() => toggleClose()}>
-              <Link to="/contact">Contact</Link>
-            </div>
+              <div className="link" onClick={() => toggleClose()}>
+                <Link to="/contact">Contact</Link>
+              </div>
 
-            <div className="link" onClick={() => toggleClose()}>
-              <Link to="/book">Book a table</Link>
-            </div>  
-
-        </div>
+              <div className="link" onClick={() => toggleClose()}>
+                <Link to="/book">Book a table</Link>
+              </div>  
+          </div>
       </div>
 
       {/* <div className="flex gap-7 font-poppins">
