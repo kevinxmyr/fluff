@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu, GiCoffeeBeans } from 'react-icons/gi'
-import { Fade } from 'react-reveal'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,6 +9,7 @@ export default function Navbar() {
     return setOpen(!open);
   }
   function toggleCloseInLogo() {
+    console.log('clicked');
     return setOpen(false)
   }
 
@@ -40,20 +40,20 @@ export default function Navbar() {
         .link > a:hover::before {
           width: 100%;
         }
-        
-		  .menu{
+      //?--------------------------//
+      .menu{
         position: absolute;
-		  }
+      }
 		  .menuOpen{
         position: absolute;
         animation-name: animateOpen;
-        animation-duration: .5s;
+        animation-duration: .8s;
         animation-fill-mode: forwards;
 		  }
       .menuClose{
         position: absolute;
+        display: none;
         animation-name: animateClose;
-        animation-duration: .250s;
         animation-fill-mode: forwards;
       }
       @keyframes animateOpen{
@@ -76,26 +76,35 @@ export default function Navbar() {
       `}
       </style>
       
-      {/* LOGO AND BURGER MENU */}
-      <div className='flex justify-between p-[5%] z-2'>
-        <div className="font-poppins font-bold text-xl uppercase brand
-          self-center"
+      {/* LOGO AND BURGER MENU NAVBAR */}
+      <div className='
+        flex 
+        justify-between 
+        p-[5%]
+        iPad:p-0'>
+        <div className="
+          font-poppins 
+          font-bold 
+          text-xl 
+          uppercase 
+          brand
+          self-center
+          iPad:"
           onClick={() => toggleCloseInLogo()}>
           <Link to="/">Fluff Koppi.</Link>
         </div>
     
-          <button className='animate-pulse' onClick={() => {
+          <button className='animate-pulse iPad:hidden' onClick={() => {
             setOpen(!open)
           }}>
-            <GiHamburgerMenu size={35}/>
+            <GiHamburgerMenu size={25}/>
           </button>
-
       </div>
 		
-    {/* NAVIGATION MENU ITEMS */}
+    {/* NAVIGATION MENU ITEMS on MOBILE*/}
     <div className={open ? 'menuOpen' : 'menuClose'}>
           <div className='
-               
+              menu
               bg-navbar
               z-[1] 
               w-[100vw]
@@ -103,26 +112,22 @@ export default function Navbar() {
               flex-col
               items-center 
               gap-5
-              p-[1rem]
+              pb-[.75rem]
             '>
-            {/* <h1 className='mt-[1rem]'>item 1</h1>
-            <h1>item 2</h1>
-            <h1 className='mb-[1rem]'>item 3</h1> */}
+            
               <div className="link" onClick={() => toggleClose()}>
                 <Link to="/menu">Menu</Link>
               </div>
-
               <div className="link" onClick={() => toggleClose()}>
                 <Link to="/contact">Contact</Link>
               </div>
-
               <div className="link" onClick={() => toggleClose()}>
                 <Link to="/book">Book a table</Link>
               </div>  
           </div>
       </div>
 
-      {/* <div className="flex gap-7 font-poppins">
+      <div className="hidden gap-7 font-poppins iPad:flex iPad:items-center">
 
           <div className="link">
             <Link to="/menu">Menu</Link>
@@ -136,7 +141,7 @@ export default function Navbar() {
             <Link to="/book">Book a table</Link>
           </div>
 
-      </div> */}
+      </div>
 
     </div>
   )

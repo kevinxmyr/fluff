@@ -9,76 +9,55 @@ import pic5 from "../assets/gallery5.jpg";
 import pic6 from "../assets/gallery6.jpg";
 
 export default function Gallery() {
+  const pics = [pic1, pic3, pic4, pic6, pic5, pic2];
+  let cardDelay = 0;
   return (
     <div className='
     bg-beige
     p-[12%]
     
-    lt:p-[2.2rem]
+    lt:p-[5%]
     lt:justify-center
     '>
-
+      {/*------------------ GRID -------------- */}
       <div className='
         gap-[1rem] 
         text-black 
         grid
 
-        lt:grid-cols-3
         lt:max-w-[1100px]
+        lt:grid-cols-3
         '>
 
-        <Fade distance='1.2rem' delay={100}bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md" src={pic1} alt='' />
-          </div>
-
-        </Fade>
-        <Fade distance='1.2rem' delay={200} bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md"  src={pic3} alt='' />
-          </div>
-        </Fade>
-
-        <Fade distance='1.2rem' delay={300} bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md"  src={pic4} alt='' />
-          </div>
-        </Fade>
-
-        <Fade distance='1.2rem' delay={400} bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md"  src={pic6} alt='' />
-          </div>
-        </Fade>
-
-        <Fade distance='1.2rem' delay={500} bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md"  src={pic5} alt='' />
-          </div>
-        </Fade>
-
-        <Fade distance='1.2rem' delay={600} bottom>
-          <div className='justify-self-center max-w-[22rem]'>
-            <img className="shadow-md"  src={pic2} alt='' />
-          </div>
-        </Fade>
+        {
+          pics.map(x => {
+            cardDelay += 100;
+            return (
+              <Fade distance='1.2rem' delay={cardDelay} bottom>
+                <div className='justify-self-center max-w-[22rem]'>
+                  <img className="shadow-md" src={x} alt='' />
+                </div>
+              </Fade>
+            )
+          })
+        }
 
         {/* FOLLOW US TEXT */}
         <Fade bottom distance='1rem' delay={50}>
         <div className='mb-5 order-first lt:order-last '>
           <div className='grid lt:grid-cols-3 '>
             <h1 className='font-bold text-black 
-                
                 text-[1.4rem]
                 leading-8
                 iPad: text-center
                 lt:text-start
                 lt:text-lg 
                 lt:justify-self-start
-                lt:pl-[1rem]
                 lt:pt-[1rem]
                 '>
-              <BsInstagram size={25} className="inline-block"/> Instagram: @fluffkoppicafe
+              <a href="https://www.instagram.com/fluffkoppicafe/?hl=en" target='_blank'>
+                <BsInstagram size={25} className="inline-block"/> Instagram: @fluffkoppicafe
+              </a>
             </h1>
           </div>
         </div>

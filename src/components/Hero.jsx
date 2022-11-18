@@ -17,6 +17,7 @@ export default function Hero(props) {
       bg-cover
 
     iPad:text-[1.2rem]
+    lt:min-h-[87vh]
     '>
       <style jsx='true'>
         {`

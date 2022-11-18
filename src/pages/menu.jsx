@@ -23,7 +23,9 @@ const Item = ({ name, price, description }) => (
   </>
 )
 
+
 export const Menu = () => {
+
   const snacksMap = snacks.map(x => {
     const { name, price, description } = x
     return (
@@ -32,6 +34,7 @@ export const Menu = () => {
       </div>
     )
   })
+
   const mealsMap = meals.map(x => {
     const { name, price, description } = x
     return (
@@ -40,6 +43,7 @@ export const Menu = () => {
       </div>
     )
   })
+  
   return (
     <div>
       <div className="
@@ -48,12 +52,15 @@ export const Menu = () => {
       text-black "> 
         <SlArrowDown className='animate-bounce'></SlArrowDown>
       </div>
+
       <Box title="Snacks">
         {snacksMap}
       </Box>
+
       <Box title="Meals">
         {mealsMap}
       </Box>
+
     </div>
   )  
 }

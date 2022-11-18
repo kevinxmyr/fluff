@@ -5,8 +5,9 @@ export const BookATable = () => (
   iPad:px-[20%]
   lt:px-[5%]
   ">
+    
 
-    <div className="grid gap-2 w-[100%]">
+    <div className="grid gap-2 w-100">
 
       <div className="uppercase font-bold text-2xl mb-2">book a table</div>
 
@@ -16,7 +17,7 @@ export const BookATable = () => (
 
       <Link to="/book">
 
-        <button className="bg-white text-black font-rufina px-10 py-4 text-sm mt-[1rem]">
+        <button className="bg-white text-black font-rufina px-10 py-4 text-sm mt-4">
           Book a table
         </button>
 
