@@ -13,7 +13,6 @@ export default function Book() {
             }
           `}
         </style>
-              {/* TEST */}
         <div className=''>
           <h1 className='uppercase font-bold text-[1.5rem] mb-5'>
             book a table
