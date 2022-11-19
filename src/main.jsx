@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { BookATable } from './components/BookATable'
 import Credits from './components/Credits'
 import Footer from './components/Footer'
@@ -37,6 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Switch>
       <Footer />
       <Credits />
+      <Redirect to='/'/>
     </Router>
   </div>
 )

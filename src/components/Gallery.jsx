@@ -31,9 +31,10 @@ export default function Gallery() {
 
         {
           pics.map(x => {
+            const key = Math.random(x)
             cardDelay += 100;
             return (
-              <Fade distance='1.2rem' delay={cardDelay} bottom>
+              <Fade key={key} distance='1.2rem' delay={cardDelay} bottom>
                 <div className='justify-self-center max-w-[22rem]'>
                   <img className="shadow-md" src={x} alt='' />
                 </div>

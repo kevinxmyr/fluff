@@ -4,10 +4,12 @@ import Hero2 from '../components/Hero2';
 import Recipes from '../components/Recipes';
 import Wecare from '../components/Wecare';
 import Gallery from '../components/Gallery'
+import Smallbites from './Smallbites';
 
 export const Index = () => {
   return (
     <>
+      <Smallbites />
       <Hero />
       <Hero2 />
       <Wecare />
