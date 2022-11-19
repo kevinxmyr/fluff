@@ -1,45 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { smallbites } from "../data/Smallbites";
 
 const Container = (props) => {
   return (
-    <div>
-      {props.children}
+    // CONTAINER OF ALL
+    <div className='max-w-[768px] lt:flex lt:flex-col mx-[auto] py-[2rem] flex flex-col'>
+      <div className='uppercase text-[1.6rem] font-bold font-poppins mb-7'>
+        small bites
+      </div>
+      <div className="lt:grid lt:grid-cols-2 lt:gap-16">
+        {props.children}
+      </div>
+      <div>
+        <Link to='/menu'>
+          <div className='bg-navbar text-white text-center w-[11rem] py-3 mt-10'>
+            <button className="font-bold">View the Menu</button>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const Item = (props) => {
-  const {title, description, price} = props
+  const { title, description, price } = props;
   return (
     <React.Fragment>
-      {/* WRAPPER */}
-      <div className="flex justify-center">
-        {/* GRID */}
-        <div className="bg-slate-200 max-w-[372px]">
-          {/* TITLE AND PRICE */}
-          <div className="bg-slate-300">
-            <div className="flex justify-between iPad:flex-col iPad:mb-4">
-              <div className="
-                uppercase 
-                text-[1.08rem]
-                font-bold
-                mb-[1.2rem]
-                iPad:mb-1
-                ">
-                {title}
-              </div>
-              <div className="bg-slate-400 mr-[.5rem]
-              iPad:row-start-2 iPad:col-start-1">
-                {price}
-              </div>
-            </div>
-          </div>
-          {/* DESCRIPTION */}
-          <div className="mb-[1rem] ">
-            {description}
-          </div>
+      <div className='lt:grid grid'>
+        <div className='lt:col-start-1 mb-5'>
+          <div className=' uppercase text-[1.1rem] lt:pb-4'>{title}</div>
+          <div className=''>{description}</div>
+        </div>
+        <div className='lt:col-start-2 col-start-2 justify-self-end'>
+          {price}
         </div>
       </div>
     </React.Fragment>
@@ -49,7 +43,7 @@ const Item = (props) => {
 export default function Smallbites() {
   const Loop = smallbites.map((item) => {
     return (
-      <div>
+      <div className=''>
         <Item
           title={item.title}
           description={item.description}
@@ -60,13 +54,9 @@ export default function Smallbites() {
   });
 
   return (
+    // MAIN BACKGROUND WHITE
     <div className='bg-white text-black p-[5%] font-rufina'>
-      <p className="font-bold font-poppins text-[1.8rem]
-      mb-[1.5rem]">
-      SMALL BITES
-      </p>
       <Container>{Loop}</Container>
-      
     </div>
   );
 }

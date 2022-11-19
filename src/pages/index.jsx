@@ -9,9 +9,9 @@ import Smallbites from './Smallbites';
 export const Index = () => {
   return (
     <>
-      <Smallbites />
       <Hero />
       <Hero2 />
+      <Smallbites />
       <Wecare />
       <Recipes />
       <Gallery />

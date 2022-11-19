@@ -5,7 +5,7 @@ export const smallbites = [
       price: "₱1.00"
    },
    {
-      title: "BREAD ROLLS",
+      title: "Bread Rolls",
       description: "Our handmade bread rolls come in all shapes and sizes",
       price: "₱2.50"
    },
