@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { smallbites } from "../data/Smallbites";
+import { smallbites } from "../data/smallbites";
 
 const Container = (props) => {
   return (
