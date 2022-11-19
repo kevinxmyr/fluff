@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./src/**/*.jsx"],
   theme: {
-    
+    boxShadow: {
+      'shadowko': '0 10px 10px rgba(0, 0, 0, 0.8)',
+    },
     screens: {
       'iPhone': '414px',
       'iPad': '768px',

@@ -21,6 +21,9 @@ export default function Hero(props) {
     '>
       <style jsx='true'>
         {`
+          .anino{
+            text-shadow: 2px 2px #000000;
+          }
           .rec {
             position: relative;
           }
@@ -66,6 +69,7 @@ export default function Hero(props) {
             pb-5
             iPad:text-[3.4rem]
             lt:text-[4rem]
+            anino
           '>
               FLUFF KOPPI.
             </h1>
@@ -80,6 +84,7 @@ export default function Hero(props) {
               font-rufina
               pb-[5rem]
               lt:text-[1.4rem]
+              anino
             '>
                 {address.address}
               </p>
