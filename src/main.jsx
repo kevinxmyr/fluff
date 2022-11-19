@@ -11,6 +11,7 @@ import { Page404 } from './pages/404'
 import { Contact } from './pages/contact'
 import { Index } from './pages/index'
 import { Menu } from './pages/menu'
+import Book from './pages/Book'
 
 import './tailwind.css'
 
@@ -29,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Contact />
         </Route>
         <Route path="/book">
-          //!--------
+          <Book />
         </Route>
         <Route path="*">
           <Page404 />

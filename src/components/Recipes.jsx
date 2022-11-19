@@ -7,12 +7,13 @@ export default function Recipes() {
   return (
     <div
       className='
-    bg-white
+      bg-[#fefefe]
       text-black
       p-[3rem_5%]
       grid
-      grid-cols-1
+      grid-cols-7
       justify-center
+      mx-[auto]
 
       iPad:grid-cols-7
       iPad:pt-[3rem]
@@ -31,8 +32,9 @@ export default function Recipes() {
 
         {/* FIRST ITEM */}
         <Fade distance='2.5rem' left>
-          <div className='bg-slate- col-start-1 row-start-2 w-[20rem] mb-[2rem]
+          <div className='bg-slate- col-start-3 row-start-2 w-[20rem] mb-[2rem]
           justify-center 
+          max-w-[391px]
           iPad:col-start-3
           lt:col-start-1
           '>
@@ -50,7 +52,7 @@ export default function Recipes() {
 
         {/* SECOND ITEM */}
         <Fade left distance='2.5rem' delay={250}>
-          <div className='bg-slate- col-start-1 row-start-4 w-[20rem] mb-[2rem]
+          <div className='bg-slate- col-start-3 row-start-4 w-[20rem] mb-[2rem]
           iPad:col-start-3
           lt:col-start-1'>
             <h1 className='font-bold text-[1.6rem] pb-8 '>Hand Crafted</h1>
@@ -66,7 +68,7 @@ export default function Recipes() {
 
         {/* THIRD ITEM */}
         <Fade left distance='2.5rem' delay={700}>
-          <div className='bg-slate- col-start-1 row-start-6 pb-[3rem] w-[20rem]
+          <div className='bg-slate- col-start-3 row-start-6 pb-[3rem] w-[20rem]
           iPad:col-start-3
           lt:col-start-1'>
             <h1 className='font-bold text-[1.6rem] pb-8'>Community</h1>
@@ -83,8 +85,7 @@ export default function Recipes() {
         </div>
 
         {/* ITEM 4 PICTURE */}
-        <div className='row-start-7 row-end-[8] col-start-1 col-span-3
-        //!---------
+        <div className='row-start-7 row-end-[8] col-start-3 col-span-3
         iPad:col-start-3
         lt:col-start-3
         lt:row-start-1
